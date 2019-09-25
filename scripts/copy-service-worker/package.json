@@ -1,0 +1,24 @@
+{
+  "name": "copy-service-worker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "debug": "nodemon --exec babel-node --inspect src/index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/node": "latest",
+    "@babel/preset-env": "latest",
+    "concurrently": "latest",
+    "node-babel": "latest",
+    "nodemon": "latest"
+  }
+}

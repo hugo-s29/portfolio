@@ -1,0 +1,12 @@
+.container.anim0 {
+  opacity: 0;
+}
+.container.anim1 {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  width: 100%;
+  opacity: 1;
+  border-radius: 0rem;
+  margin: 0;
+  padding: 30px 0;
+}
