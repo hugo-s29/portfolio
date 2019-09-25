@@ -7,7 +7,7 @@ import { Section3, S3Title } from '../components/s3'
 import Button from '../components/button'
 import Posts, { PostsProps } from '../helper/posts'
 
-import '../static/pages/index.css'
+import '../static/page_index.css'
 
 import { TimelineMax } from 'gsap'
 
