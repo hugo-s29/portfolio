@@ -9,11 +9,15 @@ export interface S2IconProps {
   hover?: string
 }
 
-export const S2Icon: React.SFC<S2IconProps> = ({ color, little, children, size = 2.54 }) => {
+export const S2Icon: React.SFC<S2IconProps> = ({
+  color,
+  little,
+  children,
+  size = 2.54,
+}) => {
   const Container = styled.div`
     width: 6rem;
     height: 6rem;
-    color: #1e1e1e;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -24,6 +28,7 @@ export const S2Icon: React.SFC<S2IconProps> = ({ color, little, children, size =
     font-weight: bold;
     transition-duration: 1s;
     text-transform: uppercase;
+    color: #1e1e1e;
     background: ${brightness(color, 30)};
     &:hover {
       background: #1e1e1e;
@@ -35,10 +40,12 @@ export const S2Icon: React.SFC<S2IconProps> = ({ color, little, children, size =
   const Big = styled.h5`
     font-size: ${size}rem;
     transform: translate(-6px, -6px);
+    user-select: none;
   `
   const Little = styled.h6`
     font-size: ${size / 2}rem;
     transform: translate(-6px, -6px);
+    user-select: none;
   `
 
   return (

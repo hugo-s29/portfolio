@@ -1,16 +1,30 @@
-import { S3Posts, S3Post, S3Title } from '../components/s3'
+import { S3Posts, S3Post } from '../components/s3'
 import fetch from 'isomorphic-unfetch'
 import { NextSFC } from '../types/next'
+import Language from '../translation/lang'
+import getLang from './lang'
+import styled from 'styled-components'
 
 export interface PostsProps {
   posts: any[]
+  lang: Language
 }
 
-const Posts: NextSFC<PostsProps> = ({ posts }) => {
-  return posts.length == 0 ? (
-    <S3Title as="h3" style={{ fontSize: '2.6rem', color: '#FF8D54', margin: '10rem' }}>
-      Pas de posts pour le moment
-    </S3Title>
+const Title = styled.h3`
+  margin: 10rem;
+  font-size: 2.6rem;
+  color: #ff8d54;
+  font-family: Poppins;
+  font-weight: bold;
+  line-height: 5.5rem;
+  @media screen and (max-width: 1024px) {
+    margin: 3rem;
+  }
+`
+
+const Posts: NextSFC<PostsProps> = ({ posts, lang }) =>
+  posts.length == 0 ? (
+    <Title>{lang.posts.noPosts}</Title>
   ) : (
     <S3Posts>
       {posts.map(({ cover_image, url, title, id }) => (
@@ -18,15 +32,18 @@ const Posts: NextSFC<PostsProps> = ({ posts }) => {
       ))}
     </S3Posts>
   )
-}
 
-Posts.getInitialProps = async () => {
+Posts.getInitialProps = async ctx => {
   const username = 'hugos29'
-  const URL = `https://dev.to/api/articles${username ? `?username=${username}` : ''}`
+  const URL = `https://dev.to/api/articles${
+    username ? `?username=${username}` : ''
+  }`
   const rawPosts = await fetch(URL)
   const posts = await rawPosts.json()
+  const lang = getLang(ctx)
   return {
     posts,
+    lang,
   }
 }
 

@@ -56,7 +56,7 @@ export class S1Name extends React.PureComponent<{}, S1NameState> {
     addEventListener('load', () => {
       setTimeout(() => this.setState({ loaded: true }), 2000)
       setTimeout(() => this.setState({ ended: true }), 6000)
-      setTimeout(() => this.setState({ filled: true }), 8000)
+      setTimeout(() => this.setState({ filled: true }), 7000)
     })
     addEventListener('resize', () => this.setState({ screenWidth: window.innerWidth }))
     this.setState({ screenWidth: window.innerWidth })

@@ -1,8 +1,22 @@
 import * as React from 'react'
 import { FaTwitter, FaDev, FaGithub } from 'react-icons/fa'
 import Link from 'next/link'
-import { S1Menu, Section1, S1MenuItem, S1Icons, S1Content, S1Name } from '../components/s1'
-import { S2Icon, Section2, S2Title, S2Icons, S2Top, S2Bottom } from '../components/s2'
+import {
+  S1Menu,
+  Section1,
+  S1MenuItem,
+  S1Icons,
+  S1Content,
+  S1Name,
+} from '../components/s1'
+import {
+  S2Icon,
+  Section2,
+  S2Title,
+  S2Icons,
+  S2Top,
+  S2Bottom,
+} from '../components/s2'
 import { Section3, S3Title } from '../components/s3'
 import Button from '../components/button'
 import Posts, { PostsProps } from '../helper/posts'
@@ -10,9 +24,13 @@ import Posts, { PostsProps } from '../helper/posts'
 import '../static/page_index.css'
 
 import { TimelineMax } from 'gsap'
+import Language from '../translation/lang'
+import getLang from '../helper/lang'
+import { DocumentContext } from 'next/document'
 
 export interface IndexProps {
   PostsPps: PostsProps
+  lang: Language
 }
 
 export interface IndexState {
@@ -30,25 +48,33 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
     this.tween = null
   }
 
-  static async getInitialProps() {
-    const PostsPps = await Posts.getInitialProps()
-    return { PostsPps }
+  static async getInitialProps(ctx: DocumentContext) {
+    const PostsPps = await Posts.getInitialProps(ctx)
+    const lang = getLang(ctx)
+    return { PostsPps, lang }
   }
 
   componentDidMount() {
-    addEventListener('resize', () => this.setState({ width: window.innerWidth }))
+    addEventListener('resize', () =>
+      this.setState({ width: window.innerWidth })
+    )
 
     const container = document.querySelector('.container')
     this.tween = new TimelineMax({ paused: true })
 
     addEventListener('load', () => {
       this.tween && this.tween.play()
-      alert("Site en développement, il n'est donc pas entièrement terminé")
+      //alert("Site en développement, il n'est donc pas entièrement terminé")
     })
 
     container && container.classList.add('anim0')
     this.tween
-      .call(() => container && container.classList.add('anim1'), undefined, null, 0)
+      .call(
+        () => container && container.classList.add('anim1'),
+        undefined,
+        null,
+        0
+      )
       .call(
         () => {
           if (!container) return null
@@ -84,6 +110,7 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
   }
 
   render() {
+    const { lang } = this.props
     return (
       <main>
         <Section1 className="section-1">
@@ -92,30 +119,42 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
             <S1Menu>
               <S1MenuItem>
                 <Link href="/projects">
-                  <a>{'<Mes Projets />'}</a>
+                  <a>{`<${lang.index.s1.projects} />`}</a>
                 </Link>
               </S1MenuItem>
               <S1MenuItem>
                 <Link href="/blog">
-                  <a>{'<Mes Posts />'}</a>
+                  <a>{`<${lang.index.s1.posts} />`}</a>
                 </Link>
               </S1MenuItem>
               <S1MenuItem>
                 <Link href="/tools">
-                  <a>{'<Mes Outils />'}</a>
+                  <a>{`<${lang.index.s1.tools} />`}</a>
                 </Link>
               </S1MenuItem>
             </S1Menu>
             <S1Icons>
-              <FaTwitter></FaTwitter>
-              <FaDev></FaDev>
-              <FaGithub></FaGithub>
+              <Link href="https://twitter.com/_hugos29">
+                <a>
+                  <FaTwitter></FaTwitter>
+                </a>
+              </Link>
+              <Link href="https://dev.to/hugos29">
+                <a>
+                  <FaDev></FaDev>
+                </a>
+              </Link>
+              <Link href="https://github.com/hugos29dev">
+                <a>
+                  <FaGithub></FaGithub>
+                </a>
+              </Link>
             </S1Icons>
           </S1Content>
         </Section1>
         <S2Top></S2Top>
         <Section2 className="section-2">
-          <S2Title>J&apos;utilise</S2Title>
+          <S2Title>{lang.index.s2.title}</S2Title>
           <S2Icons>
             <S2Icon color="#F9F871">JS</S2Icon>
             <S2Icon color="#FFC54F">TS</S2Icon>
@@ -133,15 +172,15 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
             </S2Icon>
           </S2Icons>
           <Button color="#9C27B0" upper>
-            et bien plus encore ...
+            {lang.index.s2.btn}
           </Button>
         </Section2>
         <S2Bottom></S2Bottom>
         <Section3 className="section-3">
-          <S3Title>Mes posts</S3Title>
+          <S3Title>{lang.index.s3.title}</S3Title>
           <Posts {...this.props.PostsPps}></Posts>
           <Button color="#E42391" upper defaultUp>
-            et bien plus encore ...
+            {lang.index.s3.btn}
           </Button>
         </Section3>
       </main>

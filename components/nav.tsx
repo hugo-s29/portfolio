@@ -1,8 +1,13 @@
 import * as React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Language from '../translation/lang'
 
-const NavComponent: React.SFC<{}> = () => {
+export interface NavProps {
+  lang: Language
+}
+
+const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
   const Nav = styled.nav`
     display: flex;
     justify-content: space-around;
@@ -51,17 +56,17 @@ const NavComponent: React.SFC<{}> = () => {
       <ul>
         <li>
           <Link href="/yearly">
-            <a>Annuel</a>
+            <a>{nav.yearly}</a>
           </Link>
         </li>
         <li>
           <Link href="/tools">
-            <a>Outils</a>
+            <a>{nav.tools}</a>
           </Link>
         </li>
         <li>
           <Link href="/blog">
-            <a>Blog</a>
+            <a>{nav.blog}</a>
           </Link>
         </li>
       </ul>

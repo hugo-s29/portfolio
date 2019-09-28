@@ -14,23 +14,32 @@ const Button: React.SFC<ButtonProps> = ({ children, color, upper, defaultUp }) =
     ? `
     box-shadow: none;
     transform: translate(0px,0px);  
+    color: #1e1e1e;
+    background: ${brightness(color, 30)};
   `
     : `
     box-shadow: 8px 8px 0px 0px ${brightness(color, -50)};
     transform: translate(-8px, -8px);
+    background: #1e1e1e;
+    color: ${brightness(color, 30)};
   `
   const normalUp = defaultUp
     ? `
     box-shadow: 8px 8px 0px 0px ${brightness(color, -50)};
     transform: translate(-8px, -8px);
+    background: #1e1e1e;
+    color: ${brightness(color, 30)};
   `
     : `
     box-shadow: none;
     transform: translate(0px,0px);  
+    color: #1e1e1e;
+    background: ${brightness(color, 30)};
   `
 
   const Btn = styled.button`
-    color: #e4e4e4;
+    color: #1e1e1e;
+    background: ${brightness(color, 30)};
     border: none;
     min-width: 20rem;
     min-height: 3rem;
@@ -40,7 +49,6 @@ const Button: React.SFC<ButtonProps> = ({ children, color, upper, defaultUp }) =
     ${normalUp}
     font-family: Raleway;
     font-weight: 500;
-    background-color: ${color};
     transition-duration: 1s;
     @media screen and (max-width: 700px) {
       font-size: 1rem;

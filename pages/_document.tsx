@@ -1,12 +1,26 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import Nav from '../components/nav'
 import * as React from 'react'
+import Language from '../translation/lang'
+import getLang from '../helper/lang'
 
-export default class MyDocument extends Document {
+export interface IDocument {
+  lang: Language
+}
+
+export default class MyDocument extends Document<IDocument> {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
+
+    const lang = getLang(ctx)
 
     try {
       ctx.renderPage = () =>
@@ -16,6 +30,7 @@ export default class MyDocument extends Document {
 
       const initialProps = await Document.getInitialProps(ctx)
       return {
+        lang,
         ...initialProps,
         styles: (
           <>
@@ -40,8 +55,16 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="manifest" href="/static/manifest.json" />
+          <link
+            rel="shortcut icon"
+            href="/static/icons/960.png"
+            type="image/png"
+          />
           <link rel="stylesheet" href="/static/global.css" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
           <meta name="description" content="Hugo SALOU, Développeur Web" />
         </Head>
@@ -49,7 +72,7 @@ export default class MyDocument extends Document {
           <div className="overlay"></div>
           <div className="overlay-2"></div>
           <div className="container">
-            <Nav></Nav>
+            <Nav lang={this.props.lang}></Nav>
             <Main />
           </div>
           <NextScript />

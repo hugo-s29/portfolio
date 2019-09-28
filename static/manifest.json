@@ -1,21 +1,26 @@
 {
-  "name": "Next Offline",
-  "short_name": "Next Offline",
+  "name": "Hugos29 <Dev />",
+  "short_name": "H29 <Dev />",
   "icons": [
     {
-      "src": "/static/icons/192.png",
+      "src": "/static/icons/960.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "960x960"
     },
     {
-      "src": "/static/icons/512.png",
+      "src": "/static/icons/480.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "480x480"
+    },
+    {
+      "src": "/static/icons/720.png",
+      "type": "image/png",
+      "sizes": "720x720"
     }
   ],
-  "background_color": "#FFFFFF",
-  "description": "make your Next.js application work offline using service workers via Google's workbox",
+  "background_color": "#101010",
+  "description": "Hugo SALOU's Website",
   "display": "standalone",
   "start_url": "/",
-  "theme_color": "#000"
+  "theme_color": "#FF8D54"
 }
