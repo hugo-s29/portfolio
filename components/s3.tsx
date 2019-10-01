@@ -10,7 +10,7 @@ export const Section3 = styled.section`
   align-items: center;
 `
 export const S3Title = styled.h2`
-  font-family: Poppins;
+  font-family: 'DM Serif Display';
   font-weight: bold;
   font-size: 3.52rem;
   line-height: 5.5rem;
@@ -43,7 +43,7 @@ const Post = styled.div`
   width: 17rem;
   margin: 1.54rem;
   line-height: 1.5rem;
-  font-family: Raleway;
+  font-family: 'DM Sans';
   transform: translate(-8px, -8px);
   background: ${brightness('#f9f871', -30)};
   border-color: ${brightness('#f9f871', -30)};

@@ -24,7 +24,7 @@ export const S2Icon: React.SFC<S2IconProps> = ({
     flex-direction: column;
     border-radius: 0.58rem;
     margin: 0.5rem;
-    font-family: Raleway;
+    font-family: 'DM Sans';
     font-weight: bold;
     transition-duration: 1s;
     text-transform: uppercase;
@@ -57,8 +57,7 @@ export const S2Icon: React.SFC<S2IconProps> = ({
 }
 
 export const S2Title = styled.h2`
-  font-family: Raleway;
-  font-weight: bold;
+  font-family: DM Serif Display;
   font-size: 3rem;
   line-height: 5rem;
   color: #e4e4e4;

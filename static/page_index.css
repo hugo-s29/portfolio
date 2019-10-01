@@ -10,3 +10,6 @@
   margin: 0;
   padding: 30px 0;
 }
+.container:not(.anim1):not(.anim0) .section-1 svg mask {
+  fill: white;
+}

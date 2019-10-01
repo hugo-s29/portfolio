@@ -134,21 +134,15 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
               </S1MenuItem>
             </S1Menu>
             <S1Icons>
-              <Link href="https://twitter.com/_hugos29">
-                <a>
-                  <FaTwitter></FaTwitter>
-                </a>
-              </Link>
-              <Link href="https://dev.to/hugos29">
-                <a>
-                  <FaDev></FaDev>
-                </a>
-              </Link>
-              <Link href="https://github.com/hugos29dev">
-                <a>
-                  <FaGithub></FaGithub>
-                </a>
-              </Link>
+              <a href="https://twitter.com/_hugos29">
+                <FaTwitter></FaTwitter>
+              </a>
+              <a href="https://dev.to/hugos29">
+                <FaDev></FaDev>
+              </a>
+              <a href="https://github.com/hugos29dev">
+                <FaGithub></FaGithub>
+              </a>
             </S1Icons>
           </S1Content>
         </Section1>

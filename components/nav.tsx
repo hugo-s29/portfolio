@@ -12,7 +12,7 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffc54f;
     min-height: 40px;
 
@@ -32,7 +32,13 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
         a {
           color: #ffc54f;
           font-weight: 300;
-          background: linear-gradient(to top, #ffc54f 0%, #ffc54f 6%, transparent 6.01%) no-repeat left bottom / 0 100%;
+          background: linear-gradient(
+              to top,
+              #ffc54f 0%,
+              #ffc54f 6%,
+              transparent 6.01%
+            )
+            no-repeat left bottom / 0 100%;
           text-decoration: none;
           transition: background-size 0.5s;
 

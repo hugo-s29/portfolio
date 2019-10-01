@@ -51,7 +51,7 @@ export default class MyDocument extends Document<IDocument> {
       <Html lang="fr">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Fira+Code|Inconsolata|Poppins:700,900|Raleway:300,500,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=DM+Sans|DM+Serif+Display|Fira+Code&display=swap"
             rel="stylesheet"
           />
           <link rel="manifest" href="/static/manifest.json" />
@@ -61,6 +61,10 @@ export default class MyDocument extends Document<IDocument> {
             type="image/png"
           />
           <link rel="stylesheet" href="/static/global.css" />
+          <meta
+            name="google-site-verification"
+            content="1cWe1oIfhxDkn6t-RUASQuAAnkpT0OEz0kOUL0tXYQw"
+          />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"

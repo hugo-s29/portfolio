@@ -9,7 +9,12 @@ export interface ButtonProps {
   defaultUp?: boolean
 }
 
-const Button: React.SFC<ButtonProps> = ({ children, color, upper, defaultUp }) => {
+const Button: React.SFC<ButtonProps> = ({
+  children,
+  color,
+  upper,
+  defaultUp,
+}) => {
   const animUp = defaultUp
     ? `
     box-shadow: none;
@@ -47,7 +52,7 @@ const Button: React.SFC<ButtonProps> = ({ children, color, upper, defaultUp }) =
     border-radius: 0.32rem;
     ${upper ? 'text-transform: uppercase;' : ''}
     ${normalUp}
-    font-family: Raleway;
+    font-family: 'DM Sans';
     font-weight: 500;
     transition-duration: 1s;
     @media screen and (max-width: 700px) {

@@ -14,7 +14,7 @@ const Title = styled.h3`
   margin: 10rem;
   font-size: 2.6rem;
   color: #ff8d54;
-  font-family: Poppins;
+  font-family: 'DM Serif Display';
   font-weight: bold;
   line-height: 5.5rem;
   @media screen and (max-width: 1024px) {
