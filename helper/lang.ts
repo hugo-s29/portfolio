@@ -3,12 +3,15 @@ import Language from '../translation/lang'
 import { DocumentContext } from 'next/document'
 import en from '../translation/en'
 import languageParser from 'accept-language-parser'
+import { NextPageContext } from 'next-server/dist/lib/utils'
 
-export default function getLang(ctx: DocumentContext) {
+export default function getLang(ctx: DocumentContext | NextPageContext) {
   let lang: Language = en
   let langQuality: number = 0
   if (ctx.req && ctx.req.headers['accept-language']) {
-    const acceptedLanguages = languageParser.parse(ctx.req.headers['accept-language'])
+    const acceptedLanguages = languageParser.parse(
+      ctx.req.headers['accept-language']
+    )
     for (let { code, quality } of acceptedLanguages) {
       const acceptedLanguage = languages.find(l => l.code == code)
       if (acceptedLanguage && quality >= langQuality) {

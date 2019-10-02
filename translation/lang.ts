@@ -26,4 +26,5 @@ export default abstract class Language {
   nav!: Nav
   index!: Index
   posts!: Posts
+  loader!: string
 }

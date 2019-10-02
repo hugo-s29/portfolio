@@ -22,4 +22,5 @@ export default {
   posts: {
     noPosts: 'There are no posts now',
   },
+  loader: 'Loading ...',
 }

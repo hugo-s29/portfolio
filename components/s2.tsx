@@ -74,6 +74,10 @@ export const S2Icons = styled.div`
   @media screen and (max-width: 800px) {
     max-width: 80%;
   }
+  @media screen and (max-width: 450px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
 `
 export const Section2 = styled.section`
   background-color: rgba(249, 248, 113, 0.5);

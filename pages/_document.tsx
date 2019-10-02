@@ -6,10 +6,8 @@ import Document, {
   DocumentContext,
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import Nav from '../components/nav'
 import * as React from 'react'
 import Language from '../translation/lang'
-import getLang from '../helper/lang'
 
 export interface IDocument {
   lang: Language
@@ -20,8 +18,6 @@ export default class MyDocument extends Document<IDocument> {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
-    const lang = getLang(ctx)
-
     try {
       ctx.renderPage = () =>
         originalRenderPage({
@@ -30,7 +26,6 @@ export default class MyDocument extends Document<IDocument> {
 
       const initialProps = await Document.getInitialProps(ctx)
       return {
-        lang,
         ...initialProps,
         styles: (
           <>
@@ -76,7 +71,6 @@ export default class MyDocument extends Document<IDocument> {
           <div className="overlay"></div>
           <div className="overlay-2"></div>
           <div className="container">
-            <Nav lang={this.props.lang}></Nav>
             <Main />
           </div>
           <NextScript />

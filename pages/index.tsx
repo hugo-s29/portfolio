@@ -26,7 +26,7 @@ import '../static/page_index.css'
 import { TimelineMax } from 'gsap'
 import Language from '../translation/lang'
 import getLang from '../helper/lang'
-import { DocumentContext } from 'next/document'
+import { NextPageContext } from 'next-server/dist/lib/utils'
 
 export interface IndexProps {
   PostsPps: PostsProps
@@ -48,7 +48,7 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
     this.tween = null
   }
 
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(ctx: NextPageContext) {
     const PostsPps = await Posts.getInitialProps(ctx)
     const lang = getLang(ctx)
     return { PostsPps, lang }
@@ -64,8 +64,11 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
 
     addEventListener('load', () => {
       this.tween && this.tween.play()
+
       //alert("Site en développement, il n'est donc pas entièrement terminé")
     })
+
+    if (this.tween && document.readyState == 'complete') this.tween.play()
 
     container && container.classList.add('anim0')
     this.tween

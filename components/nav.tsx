@@ -20,6 +20,24 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
       font-weight: bold;
     }
 
+    a {
+      color: #ffc54f;
+      font-weight: 300;
+      background: linear-gradient(
+          to top,
+          #ffc54f 2%,
+          #ffc54f 8%,
+          transparent 8.01%
+        )
+        no-repeat left bottom / 0 100%;
+      text-decoration: none;
+      transition: background-size 0.5s;
+
+      &:hover {
+        background-size: 100% 100%;
+      }
+    }
+
     ul {
       display: flex;
       justify-content: space-around;
@@ -28,24 +46,6 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
 
       li {
         list-style: none;
-
-        a {
-          color: #ffc54f;
-          font-weight: 300;
-          background: linear-gradient(
-              to top,
-              #ffc54f 0%,
-              #ffc54f 6%,
-              transparent 6.01%
-            )
-            no-repeat left bottom / 0 100%;
-          text-decoration: none;
-          transition: background-size 0.5s;
-
-          &:hover {
-            background-size: 100% 100%;
-          }
-        }
       }
       @media screen and (max-width: 1280px) {
         width: 60%;
@@ -58,7 +58,11 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
 
   return (
     <Nav>
-      <h3>Hugos29</h3>
+      <h3>
+        <Link href="/index">
+          <a>Hugos29</a>
+        </Link>
+      </h3>
       <ul>
         <li>
           <Link href="/yearly">

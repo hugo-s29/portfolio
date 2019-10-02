@@ -73,6 +73,7 @@ body {
   z-index: 3;
   width: 1024px;
   margin: 50px 0;
+  min-height: calc(100vh - (50px * 2));
   border-radius: 1rem;
   padding: 50px 0;
   transition-duration: 1s;
@@ -87,6 +88,10 @@ body {
 .decoration-section svg {
   height: 266.656px;
   width: 50rem;
+}
+
+a {
+  color: #f44336;
 }
 
 section {
@@ -128,6 +133,7 @@ main {
   }
   .container {
     width: 100%;
+    min-height: 100vh;
     border-radius: 0rem;
     margin: 0;
     padding: 30px 0;

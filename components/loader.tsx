@@ -1,12 +1,17 @@
 import * as React from 'react'
+import Language from '../translation/lang'
 
 export interface LoaderState {
   loaded: boolean
   display: boolean
 }
 
-class Loader extends React.Component<{}, LoaderState> {
-  constructor(props: {}) {
+export interface LoaderProps {
+  lang: Language
+}
+
+class Loader extends React.Component<LoaderProps, LoaderState> {
+  constructor(props: LoaderProps) {
     super(props)
     this.state = { loaded: false, display: true }
     window.addEventListener('load', () => {
@@ -17,7 +22,7 @@ class Loader extends React.Component<{}, LoaderState> {
   render() {
     return this.state.display ? (
       <div className="loader" style={{ opacity: this.state.loaded ? 0 : 1 }}>
-        <p>Chargement ...</p>
+        <p>{this.props.lang.loader}.</p>
         <div className="loader-cube-grid">
           <div className="loader-cube loader-cube1"></div>
           <div className="loader-cube loader-cube2"></div>
