@@ -59,7 +59,7 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
   return (
     <Nav>
       <h3>
-        <Link href="/index">
+        <Link href="/home">
           <a>Hugos29</a>
         </Link>
       </h3>
