@@ -1,0 +1,20 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+pages:
+- blog/first-blog-post.md
