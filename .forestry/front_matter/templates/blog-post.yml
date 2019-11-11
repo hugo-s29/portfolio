@@ -16,3 +16,5 @@ fields:
   config:
     required: false
   label: Author
+pages:
+- blog/first-blog-post.md
