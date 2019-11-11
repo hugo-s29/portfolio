@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 import { brightness } from '../helper/colors'
 import * as React from 'react'
 
@@ -10,7 +9,7 @@ export const Section3 = styled.section`
   align-items: center;
 `
 export const S3Title = styled.h2`
-  font-family: 'DM Serif Display';
+  font-family: Poppins;
   font-weight: bold;
   font-size: 3.52rem;
   line-height: 5.5rem;
@@ -75,11 +74,9 @@ const Post = styled.div`
 
 export const S3Post: React.SFC<PostProps> = ({ title, image, url }) => (
   <Post>
-    <Link href={url}>
-      <a>
-        <img src={image} alt="" />
-        <p>{title}</p>
-      </a>
-    </Link>
+    <a href={url}>
+      <img src={image} alt="" />
+      <p>{title}</p>
+    </a>
   </Post>
 )

@@ -46,7 +46,7 @@ export default class MyDocument extends Document<IDocument> {
       <Html lang="fr">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=DM+Sans|DM+Serif+Display|Fira+Code&display=swap"
+            href="https://fonts.googleapis.com/css?family=DM+Sans|Poppins|Fira+Code&display=swap"
             rel="stylesheet"
           />
           <link rel="manifest" href="/static/manifest.json" />

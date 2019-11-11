@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { FaTwitter, FaDev, FaGithub } from 'react-icons/fa'
-import Link from 'next/link'
 import {
   S1Menu,
   Section1,
@@ -121,19 +120,13 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
           <S1Content>
             <S1Menu>
               <S1MenuItem>
-                <Link href="/projects">
-                  <a>{`<${lang.index.s1.projects} />`}</a>
-                </Link>
+                <a href="/projects">{`<${lang.index.s1.projects} />`}</a>
               </S1MenuItem>
               <S1MenuItem>
-                <Link href="/blog">
-                  <a>{`<${lang.index.s1.posts} />`}</a>
-                </Link>
+                <a href="/blog">{`<${lang.index.s1.posts} />`}</a>
               </S1MenuItem>
               <S1MenuItem>
-                <Link href="/tools">
-                  <a>{`<${lang.index.s1.tools} />`}</a>
-                </Link>
+                <a href="/tools">{`<${lang.index.s1.tools} />`}</a>
               </S1MenuItem>
             </S1Menu>
             <S1Icons>

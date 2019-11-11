@@ -6,7 +6,7 @@ export const S1NameSvg = styled.svg`
   font-weight: 900;
   font-size: 4rem;
   line-height: 10rem;
-  font-family: 'DM Serif Display';
+  font-family: Poppins;
   max-width: 688px;
   margin: 3rem 7rem;
   transition-duration: 1s;

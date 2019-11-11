@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 import Language from '../translation/lang'
 
@@ -59,25 +58,17 @@ const NavComponent: React.SFC<NavProps> = ({ lang: { nav } }) => {
   return (
     <Nav>
       <h3>
-        <Link href="/home">
-          <a>Hugos29</a>
-        </Link>
+        <a href="/home">Hugos29</a>
       </h3>
       <ul>
         <li>
-          <Link href="/yearly">
-            <a>{nav.yearly}</a>
-          </Link>
+          <a href="/yearly">{nav.yearly}</a>
         </li>
         <li>
-          <Link href="/tools">
-            <a>{nav.tools}</a>
-          </Link>
+          <a href="/tools">{nav.tools}</a>
         </li>
         <li>
-          <Link href="/blog">
-            <a>{nav.blog}</a>
-          </Link>
+          <a href="/blog">{nav.blog}</a>
         </li>
       </ul>
     </Nav>

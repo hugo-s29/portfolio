@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 import Router from 'next/router'
 
@@ -17,10 +16,9 @@ export default class extends React.Component {
   render() {
     return (
       <main>
-        Redirecting to homepage
-        <Link href="/home">
-          <a>If doesn't work</a>
-        </Link>
+        Redirecting to homepage ...
+        <br />
+        <a href="/home">If doesn't work</a>
       </main>
     )
   }

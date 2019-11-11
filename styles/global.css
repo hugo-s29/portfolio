@@ -112,7 +112,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'DM Serif Display', 'Segoe UI', Tahoma, Geneva, Verdana,
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana,
     sans-serif;
   font-size: 5rem;
   position: fixed;

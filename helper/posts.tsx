@@ -1,6 +1,6 @@
 import { S3Posts, S3Post } from '../components/s3'
 import fetch from 'isomorphic-unfetch'
-import { NextSFC } from '../types/next'
+import { NextSFC } from '../@types/next'
 import Language from '../translation/lang'
 import getLang from './lang'
 import styled from 'styled-components'
@@ -14,7 +14,7 @@ const Title = styled.h3`
   margin: 10rem;
   font-size: 2.6rem;
   color: #ff8d54;
-  font-family: 'DM Serif Display';
+  font-family: Poppins;
   font-weight: bold;
   line-height: 5.5rem;
   @media screen and (max-width: 1024px) {

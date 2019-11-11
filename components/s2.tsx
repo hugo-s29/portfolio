@@ -57,7 +57,7 @@ export const S2Icon: React.SFC<S2IconProps> = ({
 }
 
 export const S2Title = styled.h2`
-  font-family: DM Serif Display;
+  font-family: Poppins;
   font-size: 3rem;
   line-height: 5rem;
   color: #e4e4e4;
