@@ -3,9 +3,7 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections:
-- type: heading
-  label: Title
+sections: 
 upload_dir: blog/posts
 public_path: blog/media
 front_matter_path: ''
