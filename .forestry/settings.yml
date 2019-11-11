@@ -10,8 +10,8 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: md
-upload_dir: blog/posts
-public_path: blog/media
+upload_dir: blog/media
+public_path: public/media
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
