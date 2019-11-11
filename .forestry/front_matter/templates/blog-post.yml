@@ -1,4 +1,26 @@
 ---
 label: Blog Post
 hide_body: false
-fields: []
+fields:
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Content
+- name: creation_date
+  type: datetime
+  label: Creation date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
