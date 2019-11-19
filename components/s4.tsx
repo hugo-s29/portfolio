@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import { brightness } from '../helper/colors'
 import * as React from 'react'
 
-export const Section3 = styled.section`
+export const Section4 = styled.section`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
 `
-export const S3Title = styled.h2`
+export const S4Title = styled.h2`
   font-family: Poppins;
   font-weight: bold;
   font-size: 3.52rem;
@@ -16,7 +16,7 @@ export const S3Title = styled.h2`
 
   color: #ffc54f;
 `
-export const S3Posts = styled.div`
+export const S4Posts = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -72,8 +72,8 @@ const Post = styled.div`
   }
 `
 
-export const S3Post: React.SFC<PostProps> = ({ title, image, url }) => (
-  <Post className="project-tile">
+export const S4Post: React.SFC<PostProps> = ({ title, image, url }) => (
+  <Post>
     <a href={url}>
       <img src={image} alt="" />
       <p>{title}</p>

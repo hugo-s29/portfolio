@@ -17,9 +17,14 @@ export interface Index {
     title: string
     btn: string
   }
+  s4: {
+    title: string
+    btn: string
+  }
 }
 export interface Posts {
   noPosts: string
+  noProjects: string
 }
 
 export default abstract class Language {

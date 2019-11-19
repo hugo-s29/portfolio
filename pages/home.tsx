@@ -18,6 +18,7 @@ import {
 } from '../components/s2'
 import { Section3, S3Title } from '../components/s3'
 import Button from '../components/button'
+import Break from '../components/break'
 import Posts, { PostsProps } from '../helper/posts'
 
 import '../static/page_index.css'
@@ -26,6 +27,7 @@ import { TimelineMax } from 'gsap'
 import Language from '../translation/lang'
 import getLang from '../helper/lang'
 import { NextPageContext } from 'next-server/dist/lib/utils'
+import { Section4, S4Title } from '../components/s4'
 
 export interface IndexProps {
   PostsPps: PostsProps
@@ -115,8 +117,8 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
     const { lang } = this.props
     return (
       <main>
-        <Section1 className="section-1">
-          <S1Name></S1Name>
+        <Section1 id="welcome-section" className="section-1">
+          <S1Name>Hugo SALOU</S1Name>
           <S1Content>
             <S1Menu>
               <S1MenuItem>
@@ -136,7 +138,7 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
               <a href="https://dev.to/hugos29">
                 <FaDev></FaDev>
               </a>
-              <a href="https://github.com/hugos29dev">
+              <a id="profile-link" href="https://github.com/hugos29dev">
                 <FaGithub></FaGithub>
               </a>
             </S1Icons>
@@ -173,6 +175,17 @@ class Index extends React.PureComponent<IndexProps, IndexState> {
             {lang.index.s3.btn}
           </Button>
         </Section3>
+        <Break />
+        <Section4 className="section-4" id="projects">
+          <S4Title>{lang.index.s4.title}</S4Title>
+          <a href="#" style={{ display: 'none' }}>
+            t
+          </a>
+          <Posts {...this.props.PostsPps}></Posts>
+          <Button color="#E42391" upper defaultUp>
+            {lang.index.s4.btn}
+          </Button>
+        </Section4>
       </main>
     )
   }

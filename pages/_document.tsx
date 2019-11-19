@@ -46,7 +46,7 @@ export default class MyDocument extends Document<IDocument> {
       <Html lang="fr">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=DM+Sans|Poppins|Fira+Code&display=swap"
+            href="https://fonts.googleapis.com/css?family=DM+Sans|Poppins:400,700,900|Fira+Code&display=swap"
             rel="stylesheet"
           />
           <link rel="manifest" href="/static/manifest.json" />
@@ -66,6 +66,9 @@ export default class MyDocument extends Document<IDocument> {
           />
           <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
           <meta name="description" content="Hugo SALOU, Développeur Web" />
+          <script>
+            https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
+          </script>
         </Head>
         <body>
           <div className="overlay"></div>

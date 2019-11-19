@@ -1,4 +1,4 @@
-//@ts-nocheck
+//@ts-check
 const withPlugins = require('next-compose-plugins')
 const css = require('@zeit/next-css')
 const nextEnv = require('next-env')
@@ -14,7 +14,7 @@ module.exports = withPlugins([[css], [nextEnv], [offline]], {
   // turn on the SW in dev mode so that we can actually test it
   generateInDevMode: true,
   workboxOpts: {
-    swDest: 'static/service-worker.js',
+    swDest: 'public/service-worker.js',
     maximumFileSizeToCacheInBytes: 5000000,
     runtimeCaching: [
       {

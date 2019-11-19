@@ -3,17 +3,17 @@
   "short_name": "H29 <Dev />",
   "icons": [
     {
-      "src": "/static/icons/960.png",
+      "src": "/icons/960.png",
       "type": "image/png",
       "sizes": "960x960"
     },
     {
-      "src": "/static/icons/480.png",
+      "src": "/icons/480.png",
       "type": "image/png",
       "sizes": "480x480"
     },
     {
-      "src": "/static/icons/720.png",
+      "src": "/icons/720.png",
       "type": "image/png",
       "sizes": "720x720"
     }
