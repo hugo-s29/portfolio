@@ -39,7 +39,7 @@
     "@types/react-icons": "^3.0.0",
     "@types/styled-components": "4.1.16",
     "@typescript-eslint/eslint-plugin": "^2.3.0",
-    "@typescript-eslint/parser": "^2.3.0",
+    "@typescript-eslint/parser": "^2.19.2",
     "autoprefixer": "^9.6.1",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^6.4.0",
