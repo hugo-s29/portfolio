@@ -72,6 +72,7 @@ const Home: NextPage<{}> = () => {
             {p.images_count > 0 && <Image src={`/images/p/${p.id}/0.png`} />}
           </Project>
         ))}
+        Site en développement
       </Section>
     </Main>
   );
