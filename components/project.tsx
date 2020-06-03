@@ -17,11 +17,11 @@ export interface IProjectProps {
 const Container = styled.a<{ pos: IPos }>`
   text-decoration: none;
   display: flex;
-  padding: 10%;
   justify-content: space-evenly;
   align-items: center;
   align-self: ${(p) => (p.pos !== IPos.LEFT ? "flex-start" : "flex-end")};
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
+    padding: 10%;
     align-self: center;
     flex-direction: ${(p) =>
       p.pos !== IPos.LEFT ? "column" : "column-reverse"};
@@ -35,12 +35,12 @@ const Image = styled.img`
     css`
       filter: drop-shadow(0 0 30px ${(p) => p.theme.sec});
     `}
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
     width: 50%;
   }
 `;
 const Title = styled(SubTitle)`
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
     font-size: 1rem;
     text-align: center;
   }

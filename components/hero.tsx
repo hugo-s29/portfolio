@@ -1,5 +1,5 @@
 import React, { SFC, RefObject } from "react";
-import Particles, { IParticlesParams } from "react-tsparticles";
+import Particles, { IParticlesParams } from "react-particles-js";
 import styled from "styled-components";
 import { Title, SubTitle } from "./typography";
 import { Section } from "./layout";
@@ -11,7 +11,7 @@ const HeroTitle = styled(Title)`
   font-size: 4rem;
   font-weight: 200;
   margin: 2rem;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
     text-align: center;
   }
 `;

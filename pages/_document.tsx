@@ -35,13 +35,13 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <html>
+      <Html>
         <Head>{this.props.styles}</Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
