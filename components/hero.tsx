@@ -97,7 +97,8 @@ const Hero: SFC<{
       {goTo && (
         <ScrollIcon
           onClick={() =>
-            goTo.current?.scrollIntoView({
+            goTo.current &&
+            goTo.current.scrollIntoView({
               behavior: "smooth",
             })
           }
