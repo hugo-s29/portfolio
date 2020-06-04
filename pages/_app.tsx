@@ -20,6 +20,7 @@ function App({ Component, pageProps }: AppProps) {
             rel="stylesheet"
           />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <link rel="manifest" href="/manifest.json" />
           <Charset />
           <meta
             name="keywords"
@@ -58,11 +59,6 @@ const ThemeLoad: SFC = ({ children }) => {
       {children}
       <Head>
         <meta name="theme-color" content={(state.dark ? dark : light).main} />
-        {state.dark ? (
-          <link rel="manifest" href="/manifest-dark.json" />
-        ) : (
-          <link rel="manifest" href="/manifest-light.json" />
-        )}
       </Head>
     </ThemeProvider>
   );
