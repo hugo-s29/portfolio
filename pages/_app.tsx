@@ -56,12 +56,14 @@ const ThemeLoad: SFC = ({ children }) => {
   return (
     <ThemeProvider theme={state.dark ? dark : light}>
       {children}
-      <meta name="theme-color" content={(state.dark ? dark : light).main} />
-      {state.dark ? (
-        <link rel="manifest" href="/manifest-dark.json" />
-      ) : (
-        <link rel="manifest" href="/manifest-light.json" />
-      )}
+      <Head>
+        <meta name="theme-color" content={(state.dark ? dark : light).main} />
+        {state.dark ? (
+          <link rel="manifest" href="/manifest-dark.json" />
+        ) : (
+          <link rel="manifest" href="/manifest-light.json" />
+        )}
+      </Head>
     </ThemeProvider>
   );
 };
