@@ -5,11 +5,18 @@ export interface IProject {
   name: string;
   link: string;
 }
+
+export interface ISeo {
+  description: string;
+  page_names: { [key: string]: string };
+}
 export interface ILanguage {
   sections: {
     home: string;
   };
   projects: IProject[];
+
+  seo: ISeo;
 }
 
 import fr from "./fr";

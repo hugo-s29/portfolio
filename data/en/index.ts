@@ -18,6 +18,12 @@ const lang: ILanguage = {
   sections: {
     home: "Projects",
   },
+  seo: {
+    description: "Hugo SALOU - developer",
+    page_names: {
+      home: "Home",
+    },
+  },
 };
 
 export default lang;

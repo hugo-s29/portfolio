@@ -1,0 +1,9 @@
+{
+  "name": "Hugo SALOU",
+  "short_name": "Hugos29",
+  "theme_color": "#fafafa",
+  "background_color": "#212121",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}

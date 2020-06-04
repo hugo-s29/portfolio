@@ -9,6 +9,8 @@
   "dependencies": {
     "navigator-languages-parser": "^0.10.10",
     "next": "latest",
+    "next-pwa": "^2.5.0",
+    "next-seo": "^4.5.0",
     "overmind": "^23.1.0",
     "overmind-react": "^24.1.0",
     "react": "^16.13.0",
