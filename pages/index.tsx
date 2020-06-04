@@ -38,7 +38,7 @@ function Home() {
             key={id}
             name={name}
             link={link}
-            image={`/img/p/${id}.png`}
+            image={id}
             pos={i % 2 === 0 ? IPos.LEFT : IPos.RIGHT}
           />
         ))}

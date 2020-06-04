@@ -51,11 +51,17 @@ const Project: SFC<IProjectProps> = ({ name, image, link, pos }) => (
     {pos === IPos.LEFT ? (
       <>
         <Title>{name}</Title>
-        <Image src={image} />
+        <Image
+          src={`/img/p/${image}-md.png`}
+          srcSet={`/img/p/${image}-lg.png 1000w, /img/p/${image}-md.png 650w, /img/p/${image}-sm.png 200w`}
+        />
       </>
     ) : (
       <>
-        <Image src={image} />
+        <Image
+          src={image}
+          srcSet={`/img/p/${image}-lg.png 1000w, /img/p/${image}-md.png 650w, /img/p/${image}-sm.png 200w`}
+        />
         <Title>{name}</Title>
       </>
     )}
