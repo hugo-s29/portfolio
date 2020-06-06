@@ -1,22 +1,14 @@
-import { IProject, ILanguage } from "..";
-
-const projects: IProject[] = [
-  {
-    id: "maze",
-    name: "Générateur de labyrinthe",
-    link: "",
-  },
-  {
-    id: "dino",
-    name: "Jeu dinosaure de Google Chrome",
-    link: "",
-  },
-];
+import { ILanguage } from "..";
 
 const lang: ILanguage = {
-  projects,
+  projects: {
+    maze: "Générateur de labyrinthe",
+    dino: "Jeu dinosaure de Chrome",
+    gol: "Jeu de la vie (Game of life)",
+  },
   sections: {
     home: "Projets",
+    project: "Projet",
   },
   seo: {
     description: "Hugo SALOU - développeur",

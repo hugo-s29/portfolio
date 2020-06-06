@@ -7,10 +7,8 @@ import { useEffect, SFC } from "react";
 import { ThemeProvider } from "styled-components";
 import { light, dark } from "../components/theme";
 import ThemeToggle from "../components/themeToggle";
+import HomeBtn from "../components/homeBtn";
 function App({ Component, pageProps }: AppProps) {
-  //@ts-ignore
-  const Charset = () => <meta charset="UTF-8" />;
-
   return (
     <Provider value={overmind}>
       <ThemeLoad>
@@ -19,13 +17,13 @@ function App({ Component, pageProps }: AppProps) {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap"
             rel="stylesheet"
           />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel="manifest" href="/manifest.json" />
-          <Charset />
           <meta
             name="keywords"
             content="dev,developper,Hugo,Hugo SALOU,Hugos29,Hugo29,H29,H29Dev"
           />
+          <meta charSet="UTF-8" />;
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
@@ -41,6 +39,7 @@ function App({ Component, pageProps }: AppProps) {
         </Head>
         <Style />
         <ThemeToggle />
+        <HomeBtn />
         <Component {...pageProps} />
       </ThemeLoad>
     </Provider>

@@ -1301,6 +1301,18 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
+"@types/lodash.debounce@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.debounce/-/lodash.debounce-4.0.6.tgz#c5a2326cd3efc46566c47e4c0aa248dc0ee57d60"
+  integrity sha512-4WTmnnhCfDvvuLMaF3KV4Qfki93KebocUF45msxhYyjMttZDQYzHkO639ohhk8+oco2cluAFL3t5+Jn4mleylQ==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.155"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.155.tgz#e2b4514f46a261fd11542e47519c20ebce7bc23a"
+  integrity sha512-vEcX7S7aPhsBCivxMwAANQburHBtfN9RdyXFk84IJmu2Z4Hkg1tOFgaslRiEqqvoLtbCBi6ika1EMspE+NZ9Lg==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -1320,6 +1332,11 @@
   version "10.17.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.24.tgz#c57511e3a19c4b5e9692bb2995c40a3a52167944"
   integrity sha512-5SCfvCxV74kzR3uWgTYiGxrd69TbT1I6+cMx1A5kEly/IVveJBimtAMlXiEyVFn5DvUFewQWxOOiJhlxeQwxgA==
+
+"@types/p5@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-0.9.0.tgz#aea0afe6ab2f7368b000165a27869cee8f9060a7"
+  integrity sha512-GhI0ctGdKlnf1oUEYqE+sTWuGHhjQCZXQPxazdI9Lx2eE6z7qO6T55FGFenOY3wpL8jSzLWRmt83RHGblr4AWg==
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -3993,6 +4010,11 @@ lodash._reinterpolate@^3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -4638,6 +4660,11 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
+p5@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-1.0.0.tgz#d27c77c1c11450ede27af4614a5d24470ffab0c4"
+  integrity sha512-SYYc6NSHA/mMoF00SdI39FmhifMWl0B74/Bg3T793v+KOAWgXsBfr7snv9cjHFqpcmjtJMuZSOoA55qAETCu1w==
 
 pako@~1.0.5:
   version "1.0.11"
@@ -5312,6 +5339,11 @@ react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-p5-wrapper@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-p5-wrapper/-/react-p5-wrapper-2.0.0.tgz#3c7882be616713a82b8c3121873dc6f8b3f1151c"
+  integrity sha512-oQvYEUAnAtquYoQvd7p5MdtzuSQX7cmcdDLJ3R22R4aSRiiUGyjicSYmY/m2aIVK6iegmA0s0/wuT1g3yl2MxQ==
 
 react-particles-js@^3.2.1:
   version "3.2.1"

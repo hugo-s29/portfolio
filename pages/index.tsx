@@ -5,6 +5,7 @@ import Project, { IPos } from "../components/project";
 import { useOvermind } from "../overmind";
 import { useRef } from "react";
 import { NextSeo, SocialProfileJsonLd } from "next-seo";
+import { wip } from "../data";
 
 function Home() {
   const { state } = useOvermind();
@@ -12,7 +13,7 @@ function Home() {
   return (
     <Main>
       <NextSeo
-        title="Accueil - Hugo SALOU"
+        title={`${state.language.seo.page_names.home} - Hugo SALOU`}
         description={state.language.seo.description}
         openGraph={{
           site_name: "Hugo SALOU",
@@ -33,12 +34,13 @@ function Home() {
       <Hero title="Hugo Salou" goTo={projectSection} subtitle="<dev />" />
       <Section ref={projectSection} pad="2rem 0 2rem 0">
         <Title>{state.language.sections.home}</Title>
-        {state.language.projects.map(({ id, name, link }, i) => (
+        {Object.entries(state.language.projects).map(([id, name], i) => (
           <Project
             key={id}
             name={name}
-            link={link}
+            link={`/p/${id}`}
             image={id}
+            wip={wip.includes(id)}
             pos={i % 2 === 0 ? IPos.LEFT : IPos.RIGHT}
           />
         ))}

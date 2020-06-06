@@ -48,6 +48,7 @@ const Hero: SFC<{
 }> = ({ title, goTo, subtitle }) => {
   const { state } = useOvermind();
   const color = (state.dark ? dark : light).sec;
+
   const config: IParticlesParams = {
     particles: {
       number: {

@@ -12,6 +12,7 @@ export interface IProjectProps {
   image: string;
   link: string;
   pos: IPos;
+  wip: boolean;
 }
 
 const Container = styled.a<{ pos: IPos }>`
@@ -46,11 +47,13 @@ const Title = styled(SubTitle)`
   }
 `;
 
-const Project: SFC<IProjectProps> = ({ name, image, link, pos }) => (
+const Project: SFC<IProjectProps> = ({ name, image, link, pos, wip }) => (
   <Container href={link} pos={pos}>
     {pos === IPos.LEFT ? (
       <>
-        <Title>{name}</Title>
+        <Title>
+          {name} {wip && "[WIP]"}
+        </Title>
         <Image
           src={`/img/p/${image}-md.png`}
           srcSet={`/img/p/${image}-lg.png 1000w, /img/p/${image}-md.png 650w, /img/p/${image}-sm.png 200w`}
@@ -62,7 +65,9 @@ const Project: SFC<IProjectProps> = ({ name, image, link, pos }) => (
           src={image}
           srcSet={`/img/p/${image}-lg.png 1000w, /img/p/${image}-md.png 650w, /img/p/${image}-sm.png 200w`}
         />
-        <Title>{name}</Title>
+        <Title>
+          {name} {wip && "[WIP]"}
+        </Title>
       </>
     )}
   </Container>

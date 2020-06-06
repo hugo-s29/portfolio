@@ -7,20 +7,25 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/p5": "^0.9.0",
+    "lodash.debounce": "^4.0.8",
     "navigator-languages-parser": "^0.10.10",
     "next": "latest",
     "next-pwa": "^2.5.0",
     "next-seo": "^4.5.0",
     "overmind": "^23.1.0",
     "overmind-react": "^24.1.0",
+    "p5": "^1.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-icons": "^3.10.0",
+    "react-p5-wrapper": "^2.0.0",
     "react-particles-js": "^3.2.1",
     "styled-components": "^5.0.0",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.6",
     "@types/node": "12.0.12",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",

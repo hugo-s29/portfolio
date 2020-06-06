@@ -1,10 +1,5 @@
 export type locals = "fr" | "en";
 export const locales = ["en", "fr"];
-export interface IProject {
-  id: string;
-  name: string;
-  link: string;
-}
 
 export interface ISeo {
   description: string;
@@ -13,11 +8,16 @@ export interface ISeo {
 export interface ILanguage {
   sections: {
     home: string;
+    project: string;
   };
-  projects: IProject[];
+  projects: {
+    [id: string]: string;
+  };
 
   seo: ISeo;
 }
+
+export const wip = ["dino"];
 
 import fr from "./fr";
 import en from "./en";

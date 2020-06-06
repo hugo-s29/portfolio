@@ -30,3 +30,6 @@ yarn-error.log*
 .env.production.local
 
 src-assets
+
+public/sw.*.js
+public/workbox-*.js
