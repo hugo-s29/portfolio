@@ -2,7 +2,7 @@ import { IConfig, createOvermind } from "overmind";
 import state from "./state";
 import * as actions from "./actions";
 import * as effects from "./effects";
-import { createHook } from "overmind-react";
+import { createHook, createConnect, IConnect } from "overmind-react";
 
 const config = { state, actions, effects };
 const overmind = createOvermind(config);
@@ -20,3 +20,6 @@ declare module "overmind" {
 export default overmind;
 
 export const useOvermind = createHook<typeof config>();
+
+export interface Connect extends IConnect<typeof config> {}
+export const connect = createConnect<typeof config>();

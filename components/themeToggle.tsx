@@ -42,7 +42,11 @@ export const Button = styled.button<{ dark: boolean }>`
 const ThemeToggle: SFC = () => {
   const { state, actions } = useOvermind();
   return (
-    <Button onClick={() => actions.toggleTheme()} dark={state.dark}>
+    <Button
+      onClick={() => actions.toggleTheme()}
+      dark={state.dark}
+      aria-label="Toggle light theme"
+    >
       <div>
         <FaSun className="light" />
         <FaMoon className="dark" />

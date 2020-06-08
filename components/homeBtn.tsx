@@ -22,7 +22,7 @@ const HomeBtn: SFC = () => {
   const { state } = useOvermind();
   const { push } = useRouter();
   return (
-    <Button onClick={() => push("/")} dark={state.dark}>
+    <Button onClick={() => push("/")} dark={state.dark} aria-label="Home">
       <FaHome />
     </Button>
   );

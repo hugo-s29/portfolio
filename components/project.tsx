@@ -57,6 +57,7 @@ const Project: SFC<IProjectProps> = ({ name, image, link, pos, wip }) => (
         <Image
           src={`/img/p/${image}-md.png`}
           srcSet={`/img/p/${image}-lg.png 1000w, /img/p/${image}-md.png 650w, /img/p/${image}-sm.png 200w`}
+          alt={name + " icon"}
         />
       </>
     ) : (
@@ -64,6 +65,7 @@ const Project: SFC<IProjectProps> = ({ name, image, link, pos, wip }) => (
         <Image
           src={image}
           srcSet={`/img/p/${image}-lg.png 1000w, /img/p/${image}-md.png 650w, /img/p/${image}-sm.png 200w`}
+          alt={name + " icon"}
         />
         <Title>
           {name} {wip && "[WIP]"}

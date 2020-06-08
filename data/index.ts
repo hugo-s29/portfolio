@@ -15,6 +15,7 @@ export interface ILanguage {
   };
 
   seo: ISeo;
+  name: locals;
 }
 
 export const wip = ["dino"];

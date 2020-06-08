@@ -5,6 +5,8 @@ const lang: ILanguage = {
     maze: "Générateur de labyrinthe",
     dino: "Jeu dinosaure de Chrome",
     gol: "Jeu de la vie (Game of life)",
+    mandelbrot: "Visualisateur de l'ensemble de Mandelbrot",
+    julia: "Visualisateur de l'ensemble de Julia",
   },
   sections: {
     home: "Projets",
@@ -16,6 +18,7 @@ const lang: ILanguage = {
       home: "Accueil",
     },
   },
+  name: "fr",
 };
 
 export default lang;

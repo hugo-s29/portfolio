@@ -13,6 +13,11 @@ export const setLoaded: Action = ({ state }) => {
   state.loaded = true;
 };
 export const loadLocales: Action = ({ state, effects }) => {
-  const lang = effects.locale.getLang();
+  const storedLang = effects.locale.getStoredLang();
+  const navLang = effects.locale.getLang();
+  const lang = navLang || storedLang;
+
   state.language = lang;
+
+  effects.locale.storeLang(lang);
 };

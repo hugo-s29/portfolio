@@ -1,4 +1,6 @@
 import maze from "./maze";
+import mandelbrot from "./mandelbrot";
+import julia from "./julia";
 import gol from "./gol";
 import { FC } from "react";
 import { useOvermind } from "../../overmind";
@@ -7,7 +9,12 @@ import P5Wrapper from "react-p5-wrapper";
 import { light, dark } from "../../components/theme";
 import styled from "styled-components";
 
-export const code: { [code_name: string]: (p: any) => any } = { maze, gol };
+export const code: { [code_name: string]: (p: any) => any } = {
+  maze,
+  gol,
+  mandelbrot,
+  julia,
+};
 
 const Container = styled.div`
   div {
@@ -32,15 +39,20 @@ const Container = styled.div`
   }
 `;
 
-export const CodeWrapper: FC<{ code_name: keyof typeof code }> = ({
-  code_name,
-}) => {
+export const CodeWrapper: FC<{
+  code_name: keyof typeof code;
+  props?: { [key: string]: any };
+}> = ({ code_name, props = {} }) => {
   const sketch = code[code_name];
   const { state } = useOvermind();
 
   return (
     <Container>
-      <P5Wrapper sketch={sketch} theme={state.dark ? dark : light}></P5Wrapper>
+      <P5Wrapper
+        sketch={sketch}
+        theme={state.dark ? dark : light}
+        {...props}
+      ></P5Wrapper>
     </Container>
   );
 };
