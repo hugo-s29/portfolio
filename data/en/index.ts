@@ -9,6 +9,7 @@ const lang: ILanguage = {
     julia: "Julia set viewer",
     sierpinskiTriangle: "Sierpinski Triangle generator",
     sierpinskiCarpet: "Sierpinski Carpet generator",
+    cardioid: "Times table cardioid",
   },
   sections: {
     home: "Projects",

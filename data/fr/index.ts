@@ -9,6 +9,7 @@ const lang: ILanguage = {
     julia: "Visualisateur de l'ensemble de Julia",
     sierpinskiTriangle: "Générateur de triangle de Sierpinski",
     sierpinskiCarpet: "Générateur de tapis de Sierpinski",
+    cardioid: "Cardioïde des tables de multiplication",
   },
   sections: {
     home: "Projets",

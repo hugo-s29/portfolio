@@ -3,6 +3,7 @@ import mandelbrot from "./mandelbrot";
 import julia from "./julia";
 import gol from "./gol";
 import sierpinskiTriangle from "./sierpinskiTriangle";
+import cardioid from "./cardioid";
 import sierpinskiCarpet from "./sierpinskiCarpet";
 import { FC } from "react";
 import { useOvermind } from "../../overmind";
@@ -18,6 +19,7 @@ export const code: { [code_name: string]: (p: any) => any } = {
   julia,
   sierpinskiTriangle,
   sierpinskiCarpet,
+  cardioid,
 };
 
 const Container = styled.div`
