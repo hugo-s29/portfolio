@@ -7,7 +7,8 @@ const lang: ILanguage = {
     gol: "Conway's Game of Life",
     mandelbrot: "Mandelbrot set viewer",
     julia: "Julia set viewer",
-    sierpinski: "Sierpinski Triangle generator",
+    sierpinskiTriangle: "Sierpinski Triangle generator",
+    sierpinskiCarpet: "Sierpinski Carpet generator",
   },
   sections: {
     home: "Projects",

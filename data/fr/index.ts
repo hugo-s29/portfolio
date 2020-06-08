@@ -7,7 +7,8 @@ const lang: ILanguage = {
     gol: "Jeu de la vie (Game of life)",
     mandelbrot: "Visualisateur de l'ensemble de Mandelbrot",
     julia: "Visualisateur de l'ensemble de Julia",
-    sierpinski: "Générateur de triangle de Sierpinski",
+    sierpinskiTriangle: "Générateur de triangle de Sierpinski",
+    sierpinskiCarpet: "Générateur de tapis de Sierpinski",
   },
   sections: {
     home: "Projets",

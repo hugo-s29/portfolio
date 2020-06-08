@@ -5,6 +5,7 @@ import p5, { Vector } from "p5";
 const sketch = (p: any) => {
   let theme = light;
   let sliderGen: any;
+  let newData = true;
 
   p.myCustomRedrawAccordingToNewPropsHandler = function ({
     theme: _t,
@@ -12,21 +13,26 @@ const sketch = (p: any) => {
     theme: DefaultTheme;
   }) {
     theme = _t;
+    newData = true;
   };
 
   p.setup = () => {
     p.createCanvas(800, 800);
-    sliderGen = p.createSlider(1, 10, 1, 1);
+    sliderGen = p.createSlider(1, 8, 1, 1);
+    sliderGen.input(() => (newData = true));
   };
 
   p.draw = () => {
-    p.background(p.color(theme.bg));
-    p.stroke(p.color(theme.main));
-    p.translate(p.width / 2, p.height / 2 + 50);
-    p.rotate((p.TAU * 3) / 4);
-    p.noFill();
-    let main = new Triangle(p.width, p.createVector(0, 0));
-    main.show();
+    if (newData) {
+      p.background(p.color(theme.bg));
+      p.stroke(p.color(theme.main));
+      p.translate(p.width / 2, p.height / 2 + 50);
+      p.rotate((p.TAU * 3) / 4);
+      p.noFill();
+      let main = new Triangle(p.width, p.createVector(0, 0));
+      main.show();
+      newData = false;
+    }
   };
 
   class Triangle {
