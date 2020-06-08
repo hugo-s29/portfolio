@@ -2,6 +2,7 @@ import maze from "./maze";
 import mandelbrot from "./mandelbrot";
 import julia from "./julia";
 import gol from "./gol";
+import sierpinski from "./sierpinski";
 import { FC } from "react";
 import { useOvermind } from "../../overmind";
 //@ts-ignore
@@ -14,6 +15,7 @@ export const code: { [code_name: string]: (p: any) => any } = {
   gol,
   mandelbrot,
   julia,
+  sierpinski,
 };
 
 const Container = styled.div`
