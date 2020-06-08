@@ -55,7 +55,7 @@ const sketch = (p: any) => {
     }
 
     p.noStroke();
-    p.fill(p.oolor(theme.main));
+    p.fill(p.color(theme.main));
     p.rotate(p.TAU / 4);
     p.textSize(s / 50);
     const ar = p.floor(a * 1000) / 1000;

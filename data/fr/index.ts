@@ -10,6 +10,7 @@ const lang: ILanguage = {
     sierpinskiTriangle: "Générateur de triangle de Sierpinski",
     sierpinskiCarpet: "Générateur de tapis de Sierpinski",
     cardioid: "Cardioïde des tables de multiplication",
+    pendulum: "Simulation de pendule",
   },
   sections: {
     home: "Projets",

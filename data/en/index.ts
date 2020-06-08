@@ -10,6 +10,7 @@ const lang: ILanguage = {
     sierpinskiTriangle: "Sierpinski Triangle generator",
     sierpinskiCarpet: "Sierpinski Carpet generator",
     cardioid: "Times table cardioid",
+    pendulum: "Pendulum simulation",
   },
   sections: {
     home: "Projects",

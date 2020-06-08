@@ -2,6 +2,7 @@ import maze from "./maze";
 import mandelbrot from "./mandelbrot";
 import julia from "./julia";
 import gol from "./gol";
+import pendulum from "./pendulum";
 import sierpinskiTriangle from "./sierpinskiTriangle";
 import cardioid from "./cardioid";
 import sierpinskiCarpet from "./sierpinskiCarpet";
@@ -20,6 +21,7 @@ export const code: { [code_name: string]: (p: any) => any } = {
   sierpinskiTriangle,
   sierpinskiCarpet,
   cardioid,
+  pendulum,
 };
 
 const Container = styled.div`
@@ -29,7 +31,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    * {
+    *:not(p, input) {
       margin: 20px 0;
     }
 
