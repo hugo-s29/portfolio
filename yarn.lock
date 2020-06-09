@@ -4587,14 +4587,24 @@ os-browserify@^0.3.0:
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
   integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
 
-overmind-react@^24.1.0:
-  version "24.1.0"
-  resolved "https://registry.yarnpkg.com/overmind-react/-/overmind-react-24.1.0.tgz#3e25a08f6fb642ee41ecdf334f02a203d530c777"
-  integrity sha512-ySj752/CxdfB6j+VxXvy4Sq5zNY0UKsinSh84gs2I0onvDUKRNDa8n3gROeFZid+hWPXVNZvzx4JUSg7yLkKwA==
+overmind-react@^25.0.0:
+  version "25.0.0"
+  resolved "https://registry.yarnpkg.com/overmind-react/-/overmind-react-25.0.0.tgz#8b426138ffe325624d182a3ffca5d772dd1e68ce"
+  integrity sha512-SDEYZ7kryi4DgRT7MN+6AQkKJcLy5FvcDwxepSO9N4SVTHTQrB03Jtpp/PQ073INSWuDWTGJVCFkFjWNv6eLCA==
   dependencies:
-    overmind "23.1.0"
+    overmind "24.0.0"
 
-overmind@23.1.0, overmind@^23.1.0:
+overmind@24.0.0:
+  version "24.0.0"
+  resolved "https://registry.yarnpkg.com/overmind/-/overmind-24.0.0.tgz#a201ff6a33d652aa632defa28c1cfe4d623495cc"
+  integrity sha512-hjO79zMKfs7XmqKjMtodu4KhjlNkMyP7pN+T+WGvUPFQbjg8s7h7o/03okJXAmR1YWcT+CpQW3J4YQwkAhOIVA==
+  dependencies:
+    betsy "1.0.2"
+    is-plain-obj "^1.1.0"
+    proxy-state-tree "6.0.0"
+    tslib "^1.10.0"
+
+overmind@^23.1.0:
   version "23.1.0"
   resolved "https://registry.yarnpkg.com/overmind/-/overmind-23.1.0.tgz#112c0ec7c9f362bac1df8b48f3b62232cc48ce1a"
   integrity sha512-N7GrZCuNgep+q27EgDBec3W2psFs2xyckxSlTyI5vfXrdajOcpTA6ERDWKbAcmkZVv+1PWZ96o4ozSiEk1Ea+Q==
@@ -5220,6 +5230,13 @@ proxy-state-tree@5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/proxy-state-tree/-/proxy-state-tree-5.0.1.tgz#129e8c708796fec74c3c73d6b3fcfcffecab62fb"
   integrity sha512-eEFNXXsCCHmtUkpueWrrQmBCDpzS4G7EJb7jUBSOE4KYofu0q2f61cX4NCZLBUQvxUhjXDXCARr2bDDQofIbQA==
+  dependencies:
+    is-plain-obj "^1.1.0"
+
+proxy-state-tree@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/proxy-state-tree/-/proxy-state-tree-6.0.0.tgz#e6729ff509bc92018c4a0285ab7f0f183041790c"
+  integrity sha512-aj/Mi9IHbPkQRhu1evwawiviU/E4CbSU0RE5jkVCpvn97Z0YRJvPwBFWz2zSYdt8O9vsetkyQqNR8+QkNVG+jA==
   dependencies:
     is-plain-obj "^1.1.0"
 
