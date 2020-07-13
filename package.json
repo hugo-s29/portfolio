@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@types/p5": "^0.9.0",
+    "@types/p5": "^0.9.1",
     "lodash.debounce": "^4.0.8",
     "navigator-languages-parser": "^0.10.10",
     "next": "latest",
