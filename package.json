@@ -12,7 +12,7 @@
     "navigator-languages-parser": "^0.10.10",
     "next": "latest",
     "next-pwa": "^2.5.0",
-    "next-seo": "^4.5.0",
+    "next-seo": "^4.14.0",
     "overmind": "^23.1.0",
     "overmind-react": "^24.1.0",
     "p5": "^1.0.0",
