@@ -4465,6 +4465,11 @@ node-releases@^1.1.53:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.58.tgz#8ee20eef30fa60e52755fcc0942def5a734fe935"
   integrity sha512-NxBudgVKiRh/2aPWMgPR7bPTX0VPmGx5QBwCtdHitnqFE5/O8DeBXuIMH1nwNnw/aMo6AjOrpsHzfY3UbUJ7yg==
 
+non-blocking-json@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/non-blocking-json/-/non-blocking-json-1.1.1.tgz#2180c25ee0330475bdc5e14b27d0750d7c0d73a4"
+  integrity sha512-iweGQWA3+GZkjJEXhvtRh1fjo8DpnotpL8+13NSwaI28X6HaqlYTxAI/ZXawCmva2GS3NaOl5NdNudg3RyQreQ==
+
 normalize-html-whitespace@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/normalize-html-whitespace/-/normalize-html-whitespace-1.0.0.tgz#5e3c8e192f1b06c3b9eee4b7e7f28854c7601e34"
@@ -4587,14 +4592,25 @@ os-browserify@^0.3.0:
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
   integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
 
-overmind-react@^24.1.0:
-  version "24.1.0"
-  resolved "https://registry.yarnpkg.com/overmind-react/-/overmind-react-24.1.0.tgz#3e25a08f6fb642ee41ecdf334f02a203d530c777"
-  integrity sha512-ySj752/CxdfB6j+VxXvy4Sq5zNY0UKsinSh84gs2I0onvDUKRNDa8n3gROeFZid+hWPXVNZvzx4JUSg7yLkKwA==
+overmind-react@^27.0.0:
+  version "27.0.0"
+  resolved "https://registry.yarnpkg.com/overmind-react/-/overmind-react-27.0.0.tgz#91908468b38b96c2a4fb3fd210709b1cf6e62907"
+  integrity sha512-N3DBkw5HlvBRJO0Zv8M86XeTSHwkfM/79Jv0ZORiT35tflLe5UcrIk9VTB7YLkZUwDR2pHmjiLyHZS0PVQmZDA==
   dependencies:
-    overmind "23.1.0"
+    overmind "26.0.0"
 
-overmind@23.1.0, overmind@^23.1.0:
+overmind@26.0.0:
+  version "26.0.0"
+  resolved "https://registry.yarnpkg.com/overmind/-/overmind-26.0.0.tgz#53480c09e6b99005f3c814c199531c27eb295bb8"
+  integrity sha512-oSHOZgF84eQYNVRdswvwTt88az5Cbif49mH5sA2HcLDzX2oDH1CXDoNxcEGp60sTCryYt09d+3+LcXR1UEumLQ==
+  dependencies:
+    betsy "1.0.2"
+    is-plain-obj "^1.1.0"
+    non-blocking-json "1.1.1"
+    proxy-state-tree "6.1.0"
+    tslib "^1.10.0"
+
+overmind@^23.1.0:
   version "23.1.0"
   resolved "https://registry.yarnpkg.com/overmind/-/overmind-23.1.0.tgz#112c0ec7c9f362bac1df8b48f3b62232cc48ce1a"
   integrity sha512-N7GrZCuNgep+q27EgDBec3W2psFs2xyckxSlTyI5vfXrdajOcpTA6ERDWKbAcmkZVv+1PWZ96o4ozSiEk1Ea+Q==
@@ -5220,6 +5236,13 @@ proxy-state-tree@5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/proxy-state-tree/-/proxy-state-tree-5.0.1.tgz#129e8c708796fec74c3c73d6b3fcfcffecab62fb"
   integrity sha512-eEFNXXsCCHmtUkpueWrrQmBCDpzS4G7EJb7jUBSOE4KYofu0q2f61cX4NCZLBUQvxUhjXDXCARr2bDDQofIbQA==
+  dependencies:
+    is-plain-obj "^1.1.0"
+
+proxy-state-tree@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-state-tree/-/proxy-state-tree-6.1.0.tgz#7a85eb89328e5973dc21f30b82062cf58186095e"
+  integrity sha512-3vXW9NBjWutNakrRA4Wpy8EQ4knjjmGY583vQQxIR3xsvJ2iuUrGh5jSG+aVoccW0qWKNzaPdGAxpQXaQNdXrQ==
   dependencies:
     is-plain-obj "^1.1.0"
 
