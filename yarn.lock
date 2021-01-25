@@ -4465,6 +4465,11 @@ node-releases@^1.1.53:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.58.tgz#8ee20eef30fa60e52755fcc0942def5a734fe935"
   integrity sha512-NxBudgVKiRh/2aPWMgPR7bPTX0VPmGx5QBwCtdHitnqFE5/O8DeBXuIMH1nwNnw/aMo6AjOrpsHzfY3UbUJ7yg==
 
+non-blocking-json@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/non-blocking-json/-/non-blocking-json-1.1.1.tgz#2180c25ee0330475bdc5e14b27d0750d7c0d73a4"
+  integrity sha512-iweGQWA3+GZkjJEXhvtRh1fjo8DpnotpL8+13NSwaI28X6HaqlYTxAI/ZXawCmva2GS3NaOl5NdNudg3RyQreQ==
+
 normalize-html-whitespace@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/normalize-html-whitespace/-/normalize-html-whitespace-1.0.0.tgz#5e3c8e192f1b06c3b9eee4b7e7f28854c7601e34"
@@ -4594,7 +4599,7 @@ overmind-react@^24.1.0:
   dependencies:
     overmind "23.1.0"
 
-overmind@23.1.0, overmind@^23.1.0:
+overmind@23.1.0:
   version "23.1.0"
   resolved "https://registry.yarnpkg.com/overmind/-/overmind-23.1.0.tgz#112c0ec7c9f362bac1df8b48f3b62232cc48ce1a"
   integrity sha512-N7GrZCuNgep+q27EgDBec3W2psFs2xyckxSlTyI5vfXrdajOcpTA6ERDWKbAcmkZVv+1PWZ96o4ozSiEk1Ea+Q==
@@ -4602,6 +4607,17 @@ overmind@23.1.0, overmind@^23.1.0:
     betsy "1.0.2"
     is-plain-obj "^1.1.0"
     proxy-state-tree "5.0.1"
+    tslib "^1.10.0"
+
+overmind@^27.0.0:
+  version "27.0.0"
+  resolved "https://registry.yarnpkg.com/overmind/-/overmind-27.0.0.tgz#bebec800ef601521c23ffb72a03622842d60c600"
+  integrity sha512-Olh3Ckb+KJcYIBun+ZP0PU5bEPkdAIXt/uNtBWx6C9nfpX+dndTb1VSaEpA69diNGE3V38GnNnynd7K41ruiqA==
+  dependencies:
+    betsy "1.0.2"
+    is-plain-obj "^1.1.0"
+    non-blocking-json "1.1.1"
+    proxy-state-tree "6.2.0"
     tslib "^1.10.0"
 
 p-limit@^1.1.0:
@@ -5220,6 +5236,13 @@ proxy-state-tree@5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/proxy-state-tree/-/proxy-state-tree-5.0.1.tgz#129e8c708796fec74c3c73d6b3fcfcffecab62fb"
   integrity sha512-eEFNXXsCCHmtUkpueWrrQmBCDpzS4G7EJb7jUBSOE4KYofu0q2f61cX4NCZLBUQvxUhjXDXCARr2bDDQofIbQA==
+  dependencies:
+    is-plain-obj "^1.1.0"
+
+proxy-state-tree@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/proxy-state-tree/-/proxy-state-tree-6.2.0.tgz#24e253a7539162a350dcfedbc8ba4952a00d1bc4"
+  integrity sha512-6xbFPeUArtx6eR3vmDJPEUhHLJebpKvceMe5DVClCF7ZHge8tVghbmPqJP4KZLmXMY3orHdFNA5blbFQkB5a+Q==
   dependencies:
     is-plain-obj "^1.1.0"
 
